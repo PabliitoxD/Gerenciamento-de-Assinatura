@@ -1,0 +1,371 @@
+/* === Reset e fonte global === */
+body {
+  background: #ededed;
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* === Container principal do card === */
+.container {
+  position: relative;
+  max-width: 1350px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  display: flex;
+  padding: 0;
+  overflow: visible;
+}
+
+/* === Área do texto lateral (título) === */
+.left {
+  position: absolute; /* Sobrepõe a imagem */
+  top: 100px;
+  left: 50px;
+  z-index: 2;
+  background: transparent;
+  width: 450px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* === Título principal === */
+.left h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin: 0 0 12px 0;
+  line-height: 1.1;
+  max-width: 100%;
+  color: #141414; /* Cor do texto principal */
+}
+
+.left span {
+  font-size: 3.8rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  line-height: 1.1;
+  max-width: 100%;
+  color: #141414; /* Cor do texto principal */
+}
+
+/* === Área da imagem do cliente === */
+.imagem {
+  margin-top: 24px;
+  width: auto;
+  border-radius: 24px;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* === Imagem do cliente === */
+.imagem img {
+  width: 630px; /* Largura da imagem desktop */
+  max-width: 100%;
+  border-radius: 24px;
+  margin-left: 250px;
+  margin-right: 5px;
+  margin-bottom: -15px;
+}
+
+/* === Área das informações da assinatura === */
+.right {
+  flex: 3;
+  padding: 48px 48px 48px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #141414; /* Cor do texto secundário */
+}
+
+/* === Status da assinatura (ativo/cancelado) === */
+.status-ativo {
+  background: #2b6f7b; /* Azul esverdeado */
+  padding: 4px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-block;
+  color: #fff;
+}
+.status-cancelado {
+  background: #c56565; /* Vermelho */
+  padding: 4px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-block;
+  color: #fff;
+}
+
+/* === Informação de cancelamento (data e hora) === */
+.cancelamento-info {
+  display: block;
+  font-size: 0.95rem;
+  color: #c56565;
+  margin-top: 4px;
+}
+
+/* === Elemento do status para JS === */
+#status-assinatura {
+  color: #fff;
+  font-weight: 700;
+}
+
+/* === Título das seções de informações === */
+.info-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #141414;
+}
+
+/* === Lista de informações da assinatura === */
+.info-list {
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+/* === Cada linha da lista de informações === */
+.info-list div {
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* === Label das informações === */
+.info-list .label {
+  color: #141414;
+  font-weight: 700;
+}
+
+/* === Valor das informações === */
+.info-list .value {
+  color: #141414;
+  font-weight: 400;
+}
+
+/* === Linha divisória entre seções === */
+.divider {
+  border-bottom: 1px solid #eee;
+  margin: 18px 0;
+}
+
+/* === Títulos das seções de pagamento, gerenciamento e ajuda === */
+.payment-title, .manage-title, .help-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 18px 0 10px 0;
+  color: #141414;
+}
+
+/* === Linha do cartão de pagamento === */
+.payment-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+/* === Texto do cartão de pagamento === */
+.payment-card {
+  font-size: 1rem;
+  color: #141414;
+}
+
+/* === Botão azul de atualizar cartão === */
+.btn-update {
+  background: #004aad; /* Azul */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-update:hover {
+  background: #00337a;
+}
+
+/* === Área dos botões de gerenciamento === */
+.manage-row {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+/* === Botão azul esverdeado de pausar === */
+.btn-pause {
+  background: #2b6f7b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* === Botão laranja de alterar === */
+.btn-edit {
+  background: #e57d28;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* === Botão vermelho de cancelar === */
+.btn-cancel {
+  background: #c56565;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* === Área de ajuda === */
+.help-section {
+  margin-top: 18px;
+  font-size: 1rem;
+  color: #141414;
+}
+.help-section strong {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 6px;
+}
+.help-section .contact {
+  margin-top: 6px;
+  color: #141414;
+  font-size: 0.98rem;
+}
+
+/* === Responsivo para tablets === */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column; /* Empilha as áreas */
+    border-radius: 24px;
+    max-width: 98vw;
+    margin: 16px auto;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  }
+  .left, .right {
+    position: static; /* Remove sobreposição */
+    width: 100%;
+    padding: 24px 16px;
+    color: #141414;
+  }
+  .imagem img {
+    width: 180px; /* Reduz imagem */
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* === Responsivo para celulares === */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    border-radius: 12px;
+    max-width: 100vw;
+    margin: 4px;
+    padding: 0;
+  }
+  .left, .right {
+    padding: 12px 8px;
+    width: 100%;
+    color: #141414;
+  }
+  .left h1 {
+    font-size: 1.5rem; /* Reduz título */
+    max-width: 100%;
+    margin-top: 2%;
+    margin-left: 8%;
+    color: #141414;
+    text-align: center; /* Centraliza texto */
+    white-space: normal; /* Permite quebra automática */
+    font-weight: 700;
+  }
+  .imagem img {
+    width: 100%; /* Imagem menor */
+    margin-top: -18%;
+    display: block;
+  }
+  .info-title, .payment-title, .manage-title, .help-title {
+    font-size: 1rem;
+    margin: 12px 0 6px 0;
+    color: #141414;
+  }
+  .info-list, .help-section {
+    font-size: 0.95rem;
+    color: #141414;
+  }
+  .btn-update, .btn-pause, .btn-edit, .btn-cancel {
+    font-size: 0.95rem;
+    padding: 6px 12px;
+  }
+  .info-list div {
+    flex-direction: column;
+    align-items: flex-start;
+    word-break: break-word;
+    gap: 2px;
+  }
+  .info-list .label, .info-list .value {
+    width: 100%;
+    display: block;
+    text-align: left;
+    white-space: normal;
+  }
+  .status-ativo,
+  .status-cancelado {
+    width: auto;
+    max-width: 110px; /* Aumente para caber "Cancelado" */
+    min-width: 30px;
+    display: inline-block;
+    text-align: center !important;
+    white-space: nowrap; /* Impede quebra de linha */
+    padding: 4px 10px;   /* Reduz padding para caber melhor */
+  }
+   .payment-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .btn-update {
+    width: 25%;
+    text-align: center;
+  }
+}
+
+.somente-mobile {
+  display: none;
+}
+@media (max-width: 600px) {
+  .somente-mobile {
+    display: block;
+  }
+}
+
+/* Esconde no mobile, mostra no desktop */
+.somente-desktop {
+  display: block;
+}
+@media (max-width: 600px) {
+  .somente-desktop {
+    display: none;
+  }
+}

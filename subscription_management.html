@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerencie a assinatura</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="status.js"></script>
+    <div class="container">
+
+        <!-- Titulo lateral -->
+        <div class="left">
+            <h1 class="somente-desktop">
+                <span>Gerencie</span> <br> sua assinatura
+            </h1>
+            <h1 class="somente-mobile">Gerencie sua assinatura</h1>
+        </div>
+
+        <!-- Substitua o src abaixo pela sua imagem -->
+        <div class="imagem">
+            <img src="_customer.png" alt="Pessoa usando celular">
+        </div>
+
+        <!-- Informações da assinatura -->
+        <div class="right">
+            <div class="info-title">Informações da assinatura</div>
+            <div class="info-list">
+                <div><span class="label">Produto:</span> <span class="value">Guitarra: do zero ao avançado</span></div>
+                <div><span class="label">Vendedor:</span> <span class="value">Rock Society</span></div>
+                <div class="divider"></div>
+
+                <!-- Detalhes da assinatura -->
+                <div>
+                    <span class="label">Status da assinatura:</span>
+                    <span id="status-assinatura" class="value status-ativo">Ativo</span>
+                    <span id="cancelamento-info" class="cancelamento-info" style="display:none;"></span>
+                </div>
+                <div><span class="label">Próxima cobrança:</span> <span class="value">25/10/2025</span></div>
+                <div><span class="label">Valor da assinatura:</span> <span class="value">R$57,00</span></div>
+            </div>
+
+            <!-- Cartão usado -->
+            <div class="divider"></div>
+            <div class="payment-title">Forma de pagamento</div>
+            <div class="payment-row">
+                <span class="payment-card">Cartão Final 8900</span>
+                <button class="btn-update">Atualizar</button>
+            </div>
+
+            <!-- Gerenciamento da assinatura -->
+            <div class="divider"></div>
+            <div class="manage-title">Gerenciar assinatura</div>
+            <div class="manage-row">
+                <!-- <button class="btn-pause">Pausar</button>
+                <button class="btn-edit">Alterar</button> -->
+                <button class="btn-cancel">Cancelar</button>
+            </div>
+
+            <!-- Dados para suporte -->
+            <div class="divider"></div>
+            <div class="help-title">Precisa de ajuda?</div>
+            <div class="help-section">
+                <strong>Fale agora com o seu vendedor:</strong>
+                <div class="contact">
+                    Email: suporte@suporte.com<br>
+                    (48) 98802-8922
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
